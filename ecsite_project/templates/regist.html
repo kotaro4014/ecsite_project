@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST">
+{% comment %} {% csrf_token %}はクロスサイトリクエストフォージェリ対策 {% endcomment %}
+   {% csrf_token %}
+   {{ form.as_p }}
+   <input type="submit" value="ユーザ登録">
+</form>
+{% endblock %}
